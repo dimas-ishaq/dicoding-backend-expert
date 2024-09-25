@@ -46,7 +46,7 @@ jobs:
 
     - name: Create additional test database
       run: |
-        psql -h localhost -U developer -c "CREATE DATABASE forumapi_test;"
+        psql -h localhost -U developer -d postgres -c "CREATE DATABASE forumapi_test;"
       env:
         PGPASSWORD: supersecretpassword
 
